@@ -1,7 +1,15 @@
 version: '3'
 services:
-    admin-backend: 
-        image: 'devasnetworkvn/admin-backend:latest'
+    frontend: 
+        restart: always
+        image: 'dinhlongviolin1/frontend-app:latest'
+        ports:
+            - '8000:8000'
+    backend:
+        restart: always
+        image: 'dinhlongviolin1/binance-data-backend:latest'
+        ports:
+            - '3000:3000'
     nginx:
         restart: always
         build: 

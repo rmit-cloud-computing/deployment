@@ -1,0 +1,11 @@
+version: '3'
+services:
+    admin-backend: 
+        image: 'devasnetworkvn/admin-backend:latest'
+    nginx:
+        restart: always
+        build: 
+            dockerfile: Dockerfile
+            context: ./nginx
+        ports:
+            - '80:80'

@@ -17,9 +17,9 @@ services:
             context: ./nginx
         ports:
             - '80:80'
-    newsscrape:
+    sqs-consumer-newsscrape:
         restart: always
         image: 'dinhlongviolin1/news-scrape:latest'
-    prediction:
+    sqs-consumer-consumer-prediction:
         restart: 'always'
         image: 'dinhlongviolin1/prediction-prophet:latest'

@@ -20,6 +20,6 @@ services:
     sqs-consumer-newsscrape:
         restart: always
         image: 'dinhlongviolin1/news-scrape:latest'
-    sqs-consumer-consumer-prediction:
+    sqs-consumer-prediction:
         restart: 'always'
         image: 'dinhlongviolin1/prediction-prophet:latest'
